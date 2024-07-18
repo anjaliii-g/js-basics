@@ -9,4 +9,14 @@ if(true){
 
 //global values are available in scope but scope arent outside the scope
 
+//func and expression
 
+function addone(num){  //we can call it before its defination
+    return num+1
+}
+addone(5)
+
+const addtwo = function(num){  //expressions, work as variable. here we need func defination first then call
+    return num+2
+}
+addtwo(5)

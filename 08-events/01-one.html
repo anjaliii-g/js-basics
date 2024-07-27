@@ -5,7 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>events</title>
 </head>
-<body>
+<body style="background-color: #414141; color: azure;">
     <h2>Amazing images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlFR-flTNFYwJF3QPtP9ni2iFT4ZPx8iN0yQ&s" alt="photoshop"></li>
+            <!-- //<li><img width="200px" id="owl" src="https://img.freepik.com/free-photo/photorealistic-view-owl-bird-night_23-2151464564.jpg" alt="owl" onclick="alert('owl')"></li>
+           //not feasible approach, scale m problem. react m different h. usme kr skte h. here we are talking about js -->
+           <li><img width="200px" id="owl" src="https://img.freepik.com/free-photo/photorealistic-view-owl-bird-night_23-2151464564.jpg" alt="owl"></li>
+            <li><img width="200px" id="river" src="https://static.toiimg.com/photo/msid-101267463,width-96,height-65.cms" alt="river"></li>
+            <li><a href="https://google.com" id="google" target="_blank">Google</li>
+        </ul>
+    </div>
 </body>
+<script>
+    // document.getElementById('owl').onclick=function(){   //gives us less features
+    //     alert('owl clicked')
+    // }
+
+    //type, timestamp, defaultprevent, target, toElement, srcElement, currentTarget
+    //screenX, screenY, clientX, clientY
+    //altkey, ctrlkey, shiftkey, keyCode
+     
+    document.getElementById('owl').addEventListener('click', function(e){  //returns an obj
+        alert('owl clicked again')
+    }, false)
+
+//here false indicates event bubbling. true will indicate event capturing.
+//these are types of event propagation. 
+    
+</script>
 </html>

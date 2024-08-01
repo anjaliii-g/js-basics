@@ -27,12 +27,34 @@
     //screenX, screenY, clientX, clientY
     //altkey, ctrlkey, shiftkey, keyCode
      
-    document.getElementById('owl').addEventListener('click', function(e){  //returns an obj
-        alert('owl clicked again')
-    }, false)
+    // document.getElementById('owl').addEventListener('click', function(e){  //returns an obj
+    //     alert('owl clicked again')
+    // }, false)
 
 //here false indicates event bubbling. true will indicate event capturing.
 //these are types of event propagation. 
-    
+//event bubling = capture first child then parent
+//event capturing =  capture parent first then child   
+//e.stopPropagation() = stop bubling to parent
+
+document.getElementById('google').addEventListener('click', function(e){  //returns an obj
+       e.preventDefault();  //stops the default function. here google will not be clicked.
+       console.log("google clicked");
+    }, false)
+
+///////**********////////////
+document.querySelector('#images').addEventListener('click', function(e){
+    console.log(e.target.parentNode);   //gives the whole clicked li tag 
+    //let removeit = e.target.parentNode
+   // removeit.parentNode.removeChild(removeit);
+
+ //removeit.remove();  //it will remove the whole parent node =img, whole li
+ // we need to put one check
+ if(e.target.tagName === 'IMG'){
+    console.log(e.target.id);  
+    let removeit = e.target.parentNode;
+    removeit.remove();
+ }
+}, false)
 </script>
 </html>

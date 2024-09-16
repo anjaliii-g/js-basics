@@ -11,4 +11,4 @@ accCity = "blr"
 console.log(accEmail)
 console.log(accPassword)
 console.log(accCity)
-console.table([accEmail, accPassword, accCity])
+console.table([accEmail, accPassword, accCity]);
